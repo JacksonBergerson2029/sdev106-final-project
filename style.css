@@ -1,0 +1,68 @@
+/* Dark Mode */
+
+body {
+    --border-color: black;
+    background-color: rgb(91, 136, 138);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+    --border-color: white;
+    background-color: black;
+    color: white;
+}
+
+header, nav, footer {
+    border: 1px solid var(--border-color);
+    transition: border-color 0.5s;
+}
+
+/* Dark Mode */
+
+/* Grid layout */
+
+header {
+    grid-area: h;
+}
+
+main {
+    grid-area: m;
+}
+
+nav {
+    grid-area: n;
+}
+
+footer {
+    grid-area: f;
+}
+
+.homeImages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.homeImages img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9 ;
+}
+.homeImages p {
+    margin: 0;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        "h m m"
+        "n m m"
+        "f f f";
+}
+
+/* Grid layout */
+
+header, nav, footer {
+padding: 20px;
+margin: 10px;
+}
