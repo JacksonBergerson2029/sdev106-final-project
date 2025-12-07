@@ -2,7 +2,7 @@
 
 body {
     --border-color: black;
-    background-color: rgb(91, 136, 138);
+    background-color: rgb(145, 211, 214);
     color: rgb(0, 0, 0);
     transition: background-color 0.5s ease, color 0.5s ease;
 }
@@ -14,8 +14,28 @@ body.dark-mode {
 }
 
 header, nav, footer {
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     transition: border-color 0.5s;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 1vh;
+}
+
+nav a:hover {
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(17, 101, 179);
 }
 
 /* Dark Mode */

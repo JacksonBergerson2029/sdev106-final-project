@@ -1,0 +1,133 @@
+/* Dark Mode */
+
+body {
+    --border-color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode {
+    --border-color: white;
+    background-color: black;
+    color: white;
+}
+
+header, nav, footer {
+    border: 1px solid var(--border-color);
+    transition: border-color 0.5s;
+}
+
+nav a:hover {
+  color: #2ea5fa;
+  position: relative;
+  left: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color:#e40808;
+    list-style-type: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #e40808;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+/* Dark Mode */
+
+/* Grid layout */
+
+header {
+    grid-area: h;
+}
+
+main {
+    grid-area: m;
+}
+
+nav {
+    grid-area: n;
+}
+
+footer {
+    grid-area: f;
+}
+
+.homeImages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.homeImages img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9 ;
+}
+.homeImages p {
+    margin: 0;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        "h h h"
+        "n m m"
+        "f f f";
+}
+
+/* Grid layout */
+
+header, nav, footer {
+padding: 20px;
+margin: 10px;
+}
+
+.homeImages p {
+text-align: center;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.color-square {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.color-square:hover {
+    transform: scale(1.05);
+}
+
+/* Color Palette */
+.color-1 { background-color: #c5181a; }
+.color-2 { background-color: #ffffff; }
+.color-3 { background-color: #daa78c; }
+.color-4 { background-color: #2dadf7; }
+.color-5 { background-color: #16191e; }
+.color-6 { background-color: #face9b; }
+.color-7 { background-color: #6c4323; }
+.color-8 { background-color: #fbe5cd; }
+.color-9 { background-color: #032202; }
+/* Color Palette */
