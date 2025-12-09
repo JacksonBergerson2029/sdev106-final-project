@@ -5,6 +5,7 @@ body {
     background-color: rgb(145, 211, 214);
     color: rgb(0, 0, 0);
     transition: background-color 0.5s ease, color 0.5s ease;
+    font-size: 18px;
 }
 
 body.dark-mode {
@@ -85,4 +86,33 @@ footer {
 header, nav, footer {
 padding: 20px;
 margin: 10px;
+}
+
+/* Media Query - Tablet */
+@media (max-width: 1000px) {
+    #content {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "h h"
+            "n m"
+            "f f";
+    }
+    .homeImages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query - Mobile */
+@media (max-width: 600px) {
+    #content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "h"
+            "n"
+            "m"
+            "f";
+    }
+    .homeImages {
+        grid-template-columns: 1fr;
+    }
 }

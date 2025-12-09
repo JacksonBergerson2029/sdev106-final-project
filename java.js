@@ -4,3 +4,16 @@ function toggleDark() {
     document.body.classList.toggle("dark-mode");
 }
 /* Dark Mode */
+
+function changeColor(element) {
+    console.log("changeColor called");
+    element.classList.toggle("green");
+}
+
+function changeColor(element) {
+    console.log("changeColor called");
+    element.classList.toggle("white");
+}
+
+const video = document.querySelector(".video");
+video.volume = 0.25;

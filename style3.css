@@ -5,6 +5,7 @@ body {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     transition: background-color 0.5s ease, color 0.5s ease;
+    font-size: 18px;
 }
 
 body.dark-mode {
@@ -16,6 +17,12 @@ body.dark-mode {
 header, nav, footer {
     border: 1px solid var(--border-color);
     transition: border-color 0.5s;
+}
+
+.video {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
 }
 
 nav a:hover {
@@ -79,12 +86,13 @@ footer {
     margin: 0;
 }
 
-#content {
+#content3 {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr  1fr 3fr;
     grid-template-areas:
         "h h h"
-        "n m m"
+        "n n n"
+        "m m m"
         "f f f";
 }
 
@@ -98,6 +106,20 @@ margin: 10px;
 .homeImages p {
 text-align: center;
 }
+
+#warning {
+    color: red;
+}
+
+.color-1 { background-color: #e40707; }
+.color-2 { background-color: #6b0505; }
+.color-3 { background-color: #ffffff; }
+.color-4 { background-color: #1769e6; }
+.color-5 { background-color: #1598b9; }
+.color-6 { background-color: #b4eaff; }
+.color-7 { background-color: #5a3300; }
+.color-8 { background-color: #fcc174; }
+.color-9 { background-color: #ffd6a1; }
 
 .color-grid {
     display: grid;
@@ -120,14 +142,32 @@ text-align: center;
     transform: scale(1.05);
 }
 
-/* Color Palette */
-.color-1 { background-color: #c5181a; }
-.color-2 { background-color: #ffffff; }
-.color-3 { background-color: #daa78c; }
-.color-4 { background-color: #2dadf7; }
-.color-5 { background-color: #16191e; }
-.color-6 { background-color: #face9b; }
-.color-7 { background-color: #6c4323; }
-.color-8 { background-color: #fbe5cd; }
-.color-9 { background-color: #032202; }
-/* Color Palette */
+/* Media Query - Tablet */
+@media (max-width: 1200px) {
+    #content3 {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "h"
+            "n"
+            "m"
+            "f";
+    }
+    .homeImages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query - Mobile */
+@media (max-width: 800px) {
+    #content3 {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "h"
+            "n"
+            "m"
+            "f";
+    }
+    .homeImages {
+        grid-template-columns: 1fr;
+    }
+}
