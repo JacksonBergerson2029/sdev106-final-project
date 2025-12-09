@@ -10,8 +10,8 @@ function changeColor(element) {
     element.classList.toggle("green");
 }
 
-function changeColor(element) {
-    console.log("changeColor called");
+function changeColor2(element) {
+    console.log("changeColor2 called");
     element.classList.toggle("white");
 }
 
